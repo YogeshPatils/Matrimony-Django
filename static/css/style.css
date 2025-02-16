@@ -1,0 +1,55 @@
+*{
+    margin: 0;padding: 0;box-sizing: border-box;
+    text-decoration: none;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    margin: 2em auto;
+    border-collapse: collapse;
+}
+
+tr{
+    border-bottom: 1px solid black;
+}
+
+td,th{
+    border-bottom: 1px solid black;
+    padding: 1em;
+}
+
+
+
+
+.table-btn{
+    padding: 0.5em 1em;
+
+    color: white;
+}
+.delete{
+    background-color: red;
+}
+.update{
+    background-color: yellow;
+}
+
+a.add-btn{
+    padding: 0.5em 1em;
+    position: relative;
+    top: 2em;
+    left: 1em;
+
+    background-color: steelblue;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    margin: 2em auto;
+}

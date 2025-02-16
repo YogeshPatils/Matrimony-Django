@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <form action="{% url 'search' %}">
+        <input type="text" name="search" id="" placeholder="seacrh">
+        <button type="submit">Search</button>
+    </form>
+      
+    <fieldset>
+        
+        <legend>Matrimony Register</legend>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit">Submit</button>
+        </form>
+    </fieldset>
+    <script src="{% static 'js/index.js' %}"></script>
+    
+</body>
+</html>

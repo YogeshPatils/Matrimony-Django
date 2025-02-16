@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <table>
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+            <th>Date of birth</th>
+            <th>Religion</th>
+            <th>Job</th>
+            <th>Salary</th>
+            <th>Phone</th>
+            <th></th>
+            <th></th>
+        </tr>
+        {% for user in users  %}
+        <tr>
+            <td>{{forloop.couter}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.gender}}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.dob}}</td>
+            <td>{{user.religion}}</td>
+            <td>{{user.job}}</td>
+            <td>{{user.salary}}</td>
+            <td>{{user.phone}}</td>
+            <td><a class="table-btn update" href="{% url 'update' user.id %}">Update</a></td>
+            <td><a class="table-btn delete" data-url="{% url 'delete' user.id %}" href="{% url 'delete' user.id %}">Delete</a></td>
+        </tr>
+          
+        {% endfor %}
+    </table>
+    <a  class="add-btn" href="{% url 'matrimony' %}">Add new user</a>
+    <script src="{% static 'js/index.js' %}"></script>
+    
+</body>
+</html>
